@@ -22,7 +22,7 @@ Using news database, ran postgrsql queries to find answers to 3 questions.
 * Enter python analysis.py
 * Open brower to http://localhost:8000/questions
 
-Project answers text file includes html [Analysis_Project.txt] (Analysis_Project.txt)
+### Project answers text file, (Analysis_Project.txt) includes html 
 * Recommend opening with [Notepad++](https://notepad-plus-plus.org/)
 
 <img src="/Analysis_Project.png" width="400" height="275" />
