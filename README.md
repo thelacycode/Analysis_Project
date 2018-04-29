@@ -25,4 +25,4 @@ Using news database, ran postgrsql queries to find answers to 3 questions.
 ## Screenshoot of finished product
 <img src="/Analysis_Project.png" width="400" height="275" />
 
-### Project answers text file, **Analysis_Project.txt** includes html 
+Project answers text file, **Analysis_Project.txt** includes html 
