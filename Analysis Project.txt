@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:8000/questions -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <title>Analysis Project</title>
+    <style>body { font-size: 2em; background: #111111; }
+    h1 { text-align: center; }
+    .header { color: #f5f5f5; }
+    .wrapper { display: flex; }
+    .questions { float: left; width: 30%; height: 500px; margin: 0 auto; background: #dbdbdb; padding: 5px; border-radius: 5%}
+    li { font-size: .75em;}
+    </style>
+</head>
+<body style="">
+
+    <h1 class="header"> Logs Analysis Project </h1>
+    <div class="wrapper">
+        <div class="questions">
+            <h1> Question One </h1>
+            <h3>1. What are the most popular three articles of all time?
+                Which articles have been accessed the most? </h3>
+            <h4>Answer</h4>
+            
+                <li>"Candidate is jerk, alleges rival": &nbsp;&nbsp;&nbsp; 338647 views</li>
+            
+                <li>"Bears love berries, alleges bear": &nbsp;&nbsp;&nbsp; 253801 views</li>
+            
+                <li>"Bad things gone, say good people": &nbsp;&nbsp;&nbsp; 170098 views</li>
+            
+        </div>
+        <div class="questions">
+            <h1> Question Two </h1>
+            <h3>2. Who are the most popular article authors of all time? </h3>
+            <h4>Answer</h4>
+            
+                <li>Ursula La Multa: &nbsp;&nbsp;&nbsp; 507594 views</li>
+            
+                <li>Rudolf von Treppenwitz: &nbsp;&nbsp;&nbsp; 423457 views</li>
+            
+                <li>Anonymous Contributor: &nbsp;&nbsp;&nbsp; 170098 views</li>
+            
+                <li>Markoff Chaney: &nbsp;&nbsp;&nbsp; 84557 views</li>
+            
+        </div>
+        <div class="questions">
+            <h1> Question Three </h1>
+            <h3>3. On which days did more than 1% of requests lead to errors? </h3>
+            <h4>Answer</h4>
+            
+                <li>2016-07-17, &nbsp;&nbsp;1265 errors</li>
+            
+        </div>
+    </div>
+
+<div style="position: fixed; top: 4px; right: 4px; color: black; background-color: rgb(255, 255, 128); font-family: &quot;Lucida Console&quot;, &quot;Courier New&quot;, Mono; text-align: right; max-width: 600px; font-size: 80%;"></div></body></html>

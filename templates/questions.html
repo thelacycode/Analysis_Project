@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Analysis Project</title>
+    <style>body { font-size: 2em; background: #111111; }
+    h1 { text-align: center; }
+    .header { color: #f5f5f5; }
+    .wrapper { display: flex; }
+    .questions { float: left; width: 30%; height: 500px; margin: 0 auto; background: #dbdbdb; padding: 10px; border-radius: 5%}
+    li { font-size: .75em;}
+    </style>
+</head>
+<body>
+
+    <h1 class="header"> Logs Analysis Project </h1>
+    <div class="wrapper">
+        <div class="questions">
+            <h1> Question One </h1>
+            <h3>1. What are the most popular three articles of all time?
+                Which articles have been accessed the most? </h3>
+            <h4>Answer</h4>
+            {% for rows in ans1 %}
+                <li>"{{rows[0]}}": &nbsp;&nbsp;&nbsp; {{rows[1]}} views</li>
+            {% endfor %}
+        </div>
+        <div class="questions">
+            <h1> Question Two </h1>
+            <h3>2. Who are the most popular article authors of all time? </h3>
+            <h4>Answer</h4>
+            {% for authors in ans2 %}
+                <li>{{authors[0]}}: &nbsp;&nbsp;&nbsp; {{authors[1]}} views</li>
+            {% endfor %}
+        </div>
+        <div class="questions">
+            <h1> Question Three </h1>
+            <h3>3. On which days did more than 1% of requests lead to errors? </h3>
+            <h4>Answer</h4>
+            {% for err in ans3 %}
+                <li>{{err[0]}}, &nbsp;&nbsp;{{err[1]}} errors</li>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
