@@ -11,8 +11,28 @@ Using news database, ran postgrsql queries to find answers to 3 questions.
 * .html file: Used for loop to list answers for each specific questions
 
 ## Additional Tables Created
-* Errors: 2 columns (day: date | err: numeric count of daily errors)
+* errors: 2 columns (day: date | err: numeric count of status errors)
+CREATE TABLE errors (
+  day date,
+  err numeric
+  );
+INSERT INTO errors
+SELECT (time::DATE) as day, count(status) as err
+FROM log
+WHERE status = '404 NOT FOUND'
+Group by day;
+
 * total_status: 2 columns (day: date | total: numeric count all status types)
+CREATE TABLE total_status (
+  day date,
+  total_status numeric
+  );
+INSERT INTO total_status
+SELECT (time::DATE) as day, count(status) as total
+FROM log
+Group by day;
+
+
 
 ## To run file
 * Must have vagrant virtual machine installed
@@ -26,3 +46,4 @@ Using news database, ran postgrsql queries to find answers to 3 questions.
 <img src="/Analysis_Project.png" width="400" height="275" />
 
 Project answers text file, **Analysis_Project.txt** 
+
