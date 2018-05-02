@@ -6,7 +6,43 @@ app = Flask(__name__)
 DBNAME = "news"
 
 
-#route query pulls to localhost
+# create additional table views
+db = psycopg2.connect(database=DBNAME)
+c = db.cursor()
+c.execute(
+        '''
+        CREATE TABLE errors(
+            day date,
+            err numeric
+        )
+        ''')
+c.executemany(
+        '''
+        INSERT INTO errors
+        SELECT(time::DATE) as day, count(status) as err
+        FROM log
+        WHERE status = '404 NOT FOUND'
+        Group by day        
+        ''')
+c.execute(
+        '''
+        CREATE TABLE total_status(
+            day date, 
+            total_status numeric
+        )
+        ''')
+c.executemany(
+        '''
+        INSERT INTO total_status
+        SELECT (time::DATE) as day, count(status) as total
+        FROM log
+        Group by day
+        ''')
+c.commit()
+db.close()
+
+
+# route query pulls to localhost
 @app.route('/questions')
 def questions():
     db = psycopg2.connect(database=DBNAME)
@@ -36,7 +72,6 @@ def questions():
                     '''
     c.execute(ques3)
     ans3 = c.fetchall()
-
 
     return render_template("questions.html", ans1=ans1, ans2=ans2,
                            ans3=ans3)
