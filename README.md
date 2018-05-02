@@ -12,7 +12,7 @@ Using news database, ran postgrsql queries to find answers to 3 questions.
 
 ## Additional Views
 CREATE VIEW errors(
-            SELECT(time::DATE) as day, count(status) as err
+            SELECT (time::DATE) as day, count(status) as err
             FROM log
             WHERE status = '404 NOT FOUND'
             Group by day;
